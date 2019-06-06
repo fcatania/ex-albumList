@@ -54,3 +54,7 @@ buck-out/
 
 # Bundle artifact
 *.jsbundle
+
+# Jest coverage and snapshots
+/coverage
+__snapshots__
