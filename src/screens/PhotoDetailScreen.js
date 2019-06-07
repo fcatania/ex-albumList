@@ -22,9 +22,9 @@ class PhotoDetailScreen extends PureComponent {
   }
 
   componentWillMount() {
-    const { navigation, fetchPhotoDetail } = this.props;
+    const { navigation, getPhotoDetail } = this.props;
     const photoId = navigation.getParam('photoId');
-    fetchPhotoDetail(photoId);
+    getPhotoDetail(photoId);
   }
 
   renderContent() {
@@ -47,7 +47,7 @@ class PhotoDetailScreen extends PureComponent {
     if (error) {
       content = (
         <View style={styles.centeredContentContainer}>
-          <Text>Error. Reintentar en unos minutos.</Text>
+          <Text style={styles.errorText}>Error. Reintentar en unos minutos.</Text>
         </View>
       );
     }
@@ -69,7 +69,7 @@ PhotoDetailScreen.propTypes = {
   isFetching: PropTypes.bool.isRequired,
   success: PropTypes.bool.isRequired,
   error: PropTypes.bool.isRequired,
-  fetchPhotoDetail: PropTypes.func.isRequired
+  getPhotoDetail: PropTypes.func.isRequired
 };
 
 const styles = StyleSheet.create({
@@ -86,6 +86,9 @@ const styles = StyleSheet.create({
   photo: {
     height: '100%',
     width: '100%'
+  },
+  errorText: {
+    color: theme.white
   }
 });
 

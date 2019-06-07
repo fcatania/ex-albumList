@@ -22,8 +22,8 @@ class AlbumListScreen extends PureComponent {
   }
 
   componentDidMount() {
-    const { fetchAlbumList } = this.props;
-    fetchAlbumList();
+    const { getAlbumList } = this.props;
+    getAlbumList();
   }
 
   goToPhotoList(index) {
@@ -79,7 +79,7 @@ AlbumListScreen.propTypes = {
   isFetching: PropTypes.bool.isRequired,
   success: PropTypes.bool.isRequired,
   error: PropTypes.bool.isRequired,
-  fetchAlbumList: PropTypes.func.isRequired
+  getAlbumList: PropTypes.func.isRequired
 };
 
 const styles = StyleSheet.create({
