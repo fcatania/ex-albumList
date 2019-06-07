@@ -12,7 +12,7 @@ const albumReducer = (state = INITIAL_STATE, action) => {
     case ALBUM_LIST_FETCH:
       return { ...state, isFetching: true, success: false, error: false };
     case ALBUM_LIST_SUCCESS:
-      return { ...state, isFetching: false, success: true, error: false };
+      return { ...state, isFetching: false, success: true, error: false, data: action.payload };
     case ALBUM_LIST_FAILURE:
       return { ...state, isFetching: false, success: false, error: true };
     default:

@@ -18,8 +18,8 @@ describe('albumReducer test suite', () => {
     expect(albumReducer(undefined, { type: ALBUM_LIST_FETCH })).toEqual(expected);
   });
   it('[ALBUM_LIST_SUCCESS] Should turn on success flag', () => {
-    const expected = { ...initialState, success: true };
-    expect(albumReducer(undefined, { type: ALBUM_LIST_SUCCESS })).toEqual(expected);
+    const expected = { ...initialState, success: true, data: 'data' };
+    expect(albumReducer(undefined, { type: ALBUM_LIST_SUCCESS, payload: 'data' })).toEqual(expected);
   });
   it('[ALBUM_LIST_FAILURE] Should turn on error flag', () => {
     const expected = { ...initialState, error: true };
