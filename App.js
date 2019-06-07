@@ -9,6 +9,7 @@ import AppReducer from './src/reducers';
 import theme from './src/constants/theme';
 import AlbumListScreen from './src/screens/AlbumListScreen';
 import PhotoListScreen from './src/screens/PhotoListScreen';
+import PhotoDetailScreen from './src/screens/PhotoDetailScreen';
 
 const store = createStore(AppReducer, applyMiddleware(thunk));
 
@@ -18,6 +19,9 @@ const AppNavigator = createStackNavigator({
   },
   PhotoList: {
     screen: PhotoListScreen
+  },
+  PhotoDetail: {
+    screen: PhotoDetailScreen
   }
 }, {
   defaultNavigationOptions: {
