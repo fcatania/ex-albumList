@@ -1,10 +1,9 @@
 import { combineReducers } from 'redux';
 
-// This is a mock reducer
-const mockReducer = () => ({});
+import albumReducer from './albumReducer';
 
 const AppReducer = combineReducers({
-  mockReducer
+  albumReducer
 });
 
 export default AppReducer;
