@@ -1,8 +1,11 @@
 import React, { PureComponent } from 'react';
 import { View, FlatList, StyleSheet } from 'react-native';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import PropTypes from 'prop-types';
 
 import AlbumCoverCard from '../components/AlbumCoverCard/AlbumCoverCard';
-
+import albumActions from '../actions/albums';
 import { ALBUM_LIST_SCREEN_TITLE } from '../constants/constants';
 
 // temporal data will then be fetched from the mocked server
@@ -32,6 +35,11 @@ class AlbumListScreen extends PureComponent {
     this.renderAlbumCard = this.renderAlbumCard.bind(this);
   }
 
+  componentDidMount() {
+    const { fetchAlbumList } = this.props;
+    fetchAlbumList();
+  }
+
   goToPhotoList(index) {
     const { navigation } = this.props;
     const albumPressed = mockData[index];
@@ -57,6 +65,10 @@ class AlbumListScreen extends PureComponent {
   }
 }
 
+AlbumListScreen.propTypes = {
+  fetchAlbumList: PropTypes.func.isRequired
+};
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -64,4 +76,15 @@ const styles = StyleSheet.create({
   }
 });
 
-export default AlbumListScreen;
+const mapStateToProps = ({ albumReducer }) => ({
+  isFetching: albumReducer.isFetching,
+  success: albumReducer.success,
+  error: albumReducer.error,
+  albums: albumReducer.data
+});
+
+const mapDispatchToProps = dispatch => (
+  bindActionCreators(albumActions, dispatch)
+);
+
+export default connect(mapStateToProps, mapDispatchToProps)(AlbumListScreen);
