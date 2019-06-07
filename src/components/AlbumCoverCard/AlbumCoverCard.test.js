@@ -6,9 +6,10 @@ import AlbumCoverCard from './AlbumCoverCard';
 
 const mockOnPress = jest.fn();
 const mockProps = {
-  bgImageSource: { uri: 'mockUri' },
+  index: 0,
+  coverUrl: 'mockUri',
   title: 'mockTitle',
-  photoAmount: 'mockPhotoAmount'
+  photos: []
 };
 
 describe('AlbumCoverCard test suite', () => {

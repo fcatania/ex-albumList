@@ -4,19 +4,20 @@ import PropTypes from 'prop-types';
 
 import styles from './styles';
 
-const AlbumCoverCard = ({ bgImageSource, title, photoAmount, onPress }) => (
-  <TouchableWithoutFeedback onPress={onPress}>
-    <ImageBackground source={bgImageSource} style={styles.bgImage}>
+const AlbumCoverCard = ({ index, coverUrl, title, photos, onPress }) => (
+  <TouchableWithoutFeedback onPress={() => { onPress(index); }}>
+    <ImageBackground source={{ uri: coverUrl }} style={styles.bgImage}>
       <Text style={styles.titleStyle}>{title}</Text>
-      <Text style={styles.descriptionStyle}>{`${photoAmount} photos`}</Text>
+      <Text style={styles.descriptionStyle}>{`${photos.length} photos`}</Text>
     </ImageBackground>
   </TouchableWithoutFeedback>
 );
 
 AlbumCoverCard.propTypes = {
-  bgImageSource: PropTypes.shape().isRequired,
+  index: PropTypes.number.isRequired,
+  coverUrl: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  photoAmount: PropTypes.string.isRequired,
+  photos: PropTypes.arrayOf(PropTypes.shape()).isRequired,
   onPress: PropTypes.func.isRequired
 };
 
