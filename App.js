@@ -8,12 +8,16 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 import AppReducer from './src/reducers';
 import theme from './src/constants/theme';
 import AlbumListScreen from './src/screens/AlbumListScreen';
+import PhotoListScreen from './src/screens/PhotoListScreen';
 
 const store = createStore(AppReducer, applyMiddleware(thunk));
 
 const AppNavigator = createStackNavigator({
   AlbumList: {
     screen: AlbumListScreen
+  },
+  PhotoList: {
+    screen: PhotoListScreen
   }
 }, {
   defaultNavigationOptions: {
