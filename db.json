@@ -50,6 +50,41 @@
           "thumbnailUrl": "https://cdn.pixabay.com/photo/2017/12/02/17/47/wintry-2993370_960_720.jpg"
         }
       ]
+    },
+    {
+      "id": "01",
+      "title": "Burguesia",
+      "coverUrl": "https://singularityhub.com/wp-content/uploads/2019/04/delicious-tasty-burger-future-of-food-shutterstock-671137990-1068x601.jpg",
+      "photos": [
+        {
+          "id": "100",
+          "thumbnailUrl": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2017/5/10/0/FNM_060117-Smashburger-Style-Burgers-Recipe_s4x3.jpg.rend.hgtvcom.616.462.suffix/1494459418304.jpeg"
+        },
+        {
+          "id": "101",
+          "thumbnailUrl": "https://images.unsplash.com/photo-1534790566855-4cb788d389ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+        },
+        {
+          "id": "102",
+          "thumbnailUrl": "https://cdn.pixabay.com/photo/2019/01/21/12/47/burger-3946012__340.jpg"
+        },
+        {
+          "id": "103",
+          "thumbnailUrl": "https://i.kinja-img.com/gawker-media/image/upload/s--l6rS3nZj--/c_scale,f_auto,fl_progressive,q_80,w_800/vcwkkj2ayw6eez1rbwdt.jpg"
+        },
+        {
+          "id": "104",
+          "thumbnailUrl": "https://www.tasteofhome.com/wp-content/uploads/2017/10/exps28800_UG143377D12_18_1b_RMS-696x696.jpg"
+        },
+        {
+          "id": "105",
+          "thumbnailUrl": "https://www.rallys.com/wp-content/uploads/2017/06/Cheese_Double_Featured-600x600.jpg"
+        },
+        {
+          "id": "106",
+          "thumbnailUrl": "https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Fdavidebanis%2Ffiles%2F2019%2F01%2F04_Our-Burger_stack-1200x642.jpg"
+        }
+      ]
     }
   ],
   "photos": [
