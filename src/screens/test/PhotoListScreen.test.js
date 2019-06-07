@@ -11,12 +11,14 @@ const mockNavigation = {
   getParam: jest.fn(() => ({
     title: 'mockTitle',
     photos: [mockPhoto]
-  }))
+  })),
+  navigate: jest.fn()
 };
 
 describe('PhotoListScreen test suite', () => {
   beforeEach(() => {
     mockNavigation.getParam.mockClear();
+    mockNavigation.navigate.mockClear();
   });
   it('Should match snapshot', () => {
     const component = create(<PhotoListScreen navigation={mockNavigation} />).toJSON();
@@ -38,5 +40,20 @@ describe('PhotoListScreen test suite', () => {
     const flatList = component.find('FlatList').first();
     const extracted = flatList.props().keyExtractor(mockPhoto);
     expect(extracted).toBe(mockPhoto.id);
+  });
+  it('Should call navigate when goToPhotoDetail is called', () => {
+    const component = shallow(<PhotoListScreen navigation={mockNavigation} />);
+    const instance = component.instance();
+    instance.goToPhotoDetail('mockId');
+    expect(mockNavigation.navigate).toHaveBeenCalled();
+  });
+  test('TouchableWithoutFeedback onPress should call navigate', () => {
+    const component = shallow(<PhotoListScreen navigation={mockNavigation} />);
+    const flatList = component.find('FlatList').first();
+    const virtualizedList = flatList.dive().find('VirtualizedList').first();
+    const cellRenderer = virtualizedList.dive().find('CellRenderer').first();
+    const touchable = cellRenderer.dive().find('TouchableWithoutFeedback').first();
+    touchable.props().onPress();
+    expect(mockNavigation.navigate).toHaveBeenCalled();
   });
 });

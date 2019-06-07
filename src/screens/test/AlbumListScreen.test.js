@@ -23,7 +23,7 @@ describe('AlbumListScreen test suite', () => {
     const extracted = flatList.props().keyExtractor(mockItem);
     expect(extracted).toBe(mockItem.id);
   });
-  test('AlbumCoverCard onPress placeholder test', () => {
+  test('AlbumCoverCard onPress should call navigate', () => {
     const component = shallow(<AlbumListScreen navigation={mockNavigation} />);
     const flatList = component.find('FlatList').first();
     const virtualizedList = flatList.dive().find('VirtualizedList').first();

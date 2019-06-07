@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { View, FlatList, Image, StyleSheet, Dimensions } from 'react-native';
+import { View, FlatList, Image, StyleSheet, Dimensions, TouchableWithoutFeedback } from 'react-native';
 
 import { PHOTO_LIST_SCREEN_DEFAULT_TITLE, PHOTO_LIST_COLUMN_COUNT } from '../constants/constants';
 
@@ -9,13 +9,27 @@ class PhotoListScreen extends PureComponent {
   static navigationOptions = ({ navigation }) => {
     const album = navigation.getParam('album');
     return {
-      title: album.title || PHOTO_LIST_SCREEN_DEFAULT_TITLE
+      title: album.title || PHOTO_LIST_SCREEN_DEFAULT_TITLE,
+      headerBackTitle: null
     };
+  }
+
+  constructor(props) {
+    super(props);
+    this.goToPhotoDetail = this.goToPhotoDetail.bind(this);
+    this.renderPhoto = this.renderPhoto.bind(this);
+  }
+
+  goToPhotoDetail(id) {
+    const { navigation } = this.props;
+    navigation.navigate('PhotoDetail', { photoId: id });
   }
 
   renderPhoto({ item }) {
     return (
-      <Image style={styles.photo} source={{ uri: item.thumbnailUrl }} />
+      <TouchableWithoutFeedback onPress={() => { this.goToPhotoDetail(item.id); }}>
+        <Image style={styles.photo} source={{ uri: item.thumbnailUrl }} />
+      </TouchableWithoutFeedback>
     );
   }
 
