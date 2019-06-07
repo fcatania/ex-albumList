@@ -51,5 +51,51 @@
         }
       ]
     }
+  ],
+  "photos": [
+    {
+      "id": "000",
+      "fullUrl": "https://accuweather.brightspotcdn.com/1e/23/f8de1af348408ebd3cc0bc7fb499/snow-in-pinehurst-seattle-washington-2-9-19.31.56%20AM.png"
+    },
+    {
+      "id": "001",
+      "fullUrl": "https://fournews-assets-prod-s3b-ew1-aws-c4-pml.s3.amazonaws.com/media/2017/12/snow_london_g_hd.jpg"
+    },
+    {
+      "id": "002",
+      "fullUrl": "https://images.fineartamerica.com/images/artworkimages/medium/1/snowy-city-at-night-corky-willis-and-associates-atlanta-photography.jpg"
+    },
+    {
+      "id": "003",
+      "fullUrl": "https://www.visitrovaniemi.fi/wp-content/uploads/visit-rovaniemi-love-snow-and-ice-web-opt-1.jpg"
+    },
+    {
+      "id": "004",
+      "fullUrl": "https://s3.amazonaws.com/cms.ipressroom.com/173/files/20193/5cb4a6212cfac23fe70ec950_falling+snow-thom-holmes-unsplash2/falling+snow-thom-holmes-unsplash2_9334b087-04bf-4862-b3a7-862797a6e54c-prv.jpg"
+    },
+    {
+      "id": "005",
+      "fullUrl": "https://bloximages.chicago2.vip.townnews.com/tucson.com/content/tncms/assets/v3/editorial/f/dd/fdd7e103-f54c-589e-9aa3-38a157f42c47/5c70b1d0cbc01.image.jpg?resize=1200%2C766"
+    },
+    {
+      "id": "006",
+      "fullUrl": "https://i.imgur.com/MK5jT18.png"
+    },
+    {
+      "id": "007",
+      "fullUrl": "https://cdn-04.belfasttelegraph.co.uk/incoming/article30949966.ece/19afd/AUTOCROP/w620/photo.JPG"
+    },
+    {
+      "id": "008",
+      "fullUrl": "https://ichef.bbci.co.uk/news/660/cpsprodpb/146F5/production/_105410738_snow.jpg"
+    },
+    {
+      "id": "009",
+      "fullUrl": "https://secretldn.com/wp-content/uploads/2018/02/Snow-Weather-London.jpg"
+    },
+    {
+      "id": "010",
+      "fullUrl": "https://cdn.pixabay.com/photo/2017/12/02/17/47/wintry-2993370_960_720.jpg"
+    }
   ]
 }
