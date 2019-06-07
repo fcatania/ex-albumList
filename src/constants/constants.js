@@ -1,3 +1,5 @@
 module.exports = {
-  ALBUM_LIST_SCREEN_TITLE: 'Albums'
+  ALBUM_LIST_SCREEN_TITLE: 'Albums',
+  PHOTO_LIST_SCREEN_DEFAULT_TITLE: 'Photos',
+  PHOTO_LIST_COLUMN_COUNT: 3
 };
